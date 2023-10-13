@@ -2,9 +2,25 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
+// import axios from 'axios';
 
 
 function App() {
+  // const [data, setData] = useState([]);
+
+  
+  // useEffect(() => {
+  //   // Substitua a URL abaixo pelo URL do seu servidor Node.js
+  //   axios.get('http://localhost:3001/user')
+  //     .then((response) => {
+  //       setData(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // }, []);
+
+  // console.log('data=', data);
 
   const times = [
     {
@@ -54,6 +70,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
+
       <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
 
       {times.map(time => <Time 
